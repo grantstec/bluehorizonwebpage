@@ -61,11 +61,10 @@ body.dark,html.dark {
     padding: 0;
     margin: 0;
     height: 100%;
-    width: calc(100% - 100px);
+    width: 100%;
     background-color: #fff;
     transition: .6s cubic-bezier(.175,.885,.32,1.275) all;
     position: relative;
-    margin-left: 100px
 }
 
 body.dark .wrapper {
@@ -73,7 +72,7 @@ body.dark .wrapper {
 }
 
 body.menu-open .wrapper {
-    margin-top: 80vh
+    margin-top: 60vh
 }
 
 .menu {
@@ -109,7 +108,7 @@ body.menu-open .wrapper {
 }
 
 body.menu-open .menu {
-    height: 80vh;
+    height: 70vh;
     border-bottom-left-radius: 0!important;
     border-bottom-right-radius: 0!important
 }
@@ -311,14 +310,14 @@ body.menu-open .hamburger-inner:after {
 
 .menu-item {
     opacity: 0;
-    padding-left: -20px;
+    padding-left: -2vh;
     transition: .25s ease all;
-    font-size: 40px;
+    font-size: 2vh;
     color: #fff;
-    padding: 15px;
+    padding: 1vh;
     display: inline-block;
     cursor: pointer;
-    margin: 15px auto;
+    margin: 2vh auto;
     vertical-align: middle;
     transform: perspective(1px) translateZ(0) scale(0,0);
     box-shadow: 0 0 1px transparent;
