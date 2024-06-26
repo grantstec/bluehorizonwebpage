@@ -120,6 +120,15 @@ $(".portfolio-filter").click(function() {
         $('head').append('<style>.portfolio-filters:before{width:' + el.outerWidth() + 'px;left:' + (el.offset().left - $(".portfolio-filters").offset().left) + 'px}</style>');
     }
 });
+document.querySelectorAll('.portfolio-filter').forEach(item => {
+    item.addEventListener('click', function() {
+        document.querySelectorAll('.portfolio-filter').forEach(el => {
+            el.classList.remove('active'); // Remove active class from all items
+        });
+        item.classList.add('active'); // Add active class to clicked item
+    });
+});
+
 $(".menu-item").click(function() {
     var target = $(this).attr("data-target");
     $("body").removeClass("menu-open");
