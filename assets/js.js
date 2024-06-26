@@ -46,7 +46,7 @@ window.addEventListener('scroll', function(event) {
         document.title = 'BlueHorizon.app';
     } else {
         $("#one").css("height", "1px");
-        document.title = 'Portfolio - Rulko.ca';
+        document.title = 'BlueHorizon.app';
     }
     if ($("body").hasClass("menu-open"))
         $("body").removeClass("menu-open");

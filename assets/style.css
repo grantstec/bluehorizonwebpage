@@ -144,10 +144,9 @@ section {
 }
 
 .bigcheese {
-    font-size: inherit;
     text-align: center;
     font-weight: 400;
-    display: inline;
+    font-size: 10vw;
     justify-content: center;
     transition: .3s ease transform;
     align-items: baseline;
@@ -957,7 +956,8 @@ body.dark .portfolio-filters:before {
 
 .showcase {
     width: 96%;
-    margin-left 2.5%;display: flex;
+    margin-left: 2.5%;
+    display: flex; 
     justify-content: safe center;
     align-items: center;
     align-content: safe center;
@@ -1384,7 +1384,7 @@ html.is-flickity-fullscreen {
     transform: scale(1.03)
 }
 
-@media only screen and (max-width: 1500px) {
+/* @media only screen and (max-width: 1500px) {
     .contact {
         transform:translateX(-92vw) translateX(80px);
         width: calc(92% + 15px)
@@ -1409,7 +1409,7 @@ html.is-flickity-fullscreen {
     }
 
     .bigcheese {
-        font-size: 50px
+        font-size: 150px
     }
 
     .title {
@@ -1789,7 +1789,7 @@ html.is-flickity-fullscreen {
     body.menu-open .menu {
         height:95vh
     }
-}
+} */
 
 .ms-edge-icon {
     height: 1em;
