@@ -1,3 +1,14 @@
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: login.html');
+	exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -8,10 +19,9 @@
         <meta name="author" content="Grant Stec" />
         <script
             src="/cdn-cgi/apps/head/6IZR6VXrlpzSjRK8uoMFS38Blx4.js"></script>
-        <link rel="icon" href="assets/img/icon.png" type="image/png" />
         <link rel="shortcut icon" type="image/vnd.microsoft.icon"
             href="assets/img/icon.ico?v=1.0" />
-        <link rel="icon" type="image/ico" href="assets/img/icon.ico">
+        <link rel="icon" type="image/png" href="assets/img/favicon.png">
         <link rel="stylesheet" href="assets/style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <noscript>
@@ -51,12 +61,14 @@
             <br />
             <div class="menu-item"
                 style="transition: transform 0.25s ease 0.15s, opacity 0.25s ease 0.05s, all 0.25s ease">
-                <a href="Portal/">Other Info</a>
+                Other Info
             </div>
             <br />
             <div class="menu-item" data-target="contact"
                 style="transition: transform 0.25s ease 0.1s, opacity 0.25s ease 0.05s, all 0.25s ease">
-                Login
+                <a href="logout.php">
+                    Logout
+                </a>
             </div>
             <div class="togglebox" title="Toggle Light/Dark Modes">
                 <label class="switch" for="checkbox">
@@ -66,48 +78,6 @@
                 </label>
             </div>
         </div>
-        <!-- <div class="contact">
-            <div class="content">
-                <h1>Contact</h1>
-                <div id="contact-bin"></div>
-                <h3><b>Hello!</b>
-                    Please use this to report any issues with the website, or to suggest any changes.
-                </h3>
-                <form action="https://formspree.io/theo@rulko.ca" method="POST">
-                    <div class="input-wrap half">
-                        <label for="name">
-                            <i class="fas fa-user-alt">
-                            </i>
-                        </label>
-                        <input type="text" name="name" placeholder="Name" />
-                    </div>
-                    <div class="input-wrap half">
-                        <label for="name">
-                            <i class="fas fa-envelope">
-                            </i>
-                        </label>
-                        <input type="email" name="_replyto"
-                            placeholder="Email" />
-                    </div>
-                    <textarea name="message" placeholder="Message"></textarea>
-                    <button type="submit" class="button">
-                        Send
-                    </button>
-
-                    <input type="hidden" name="_next"
-                        value="https://rulko.ca/?s=y" />
-                    <input type="hidden" name="_subject"
-                        value="Message from Website" />
-                    <input type="text" name="_gotcha" style="display:none" />
-
-                </form>
-            </div>
-            <div class="contact-button">
-                <i class="far fa-user-circle"
-                    style="background:linear-gradient(90deg, rgb(243,122,15), rgb(255,133,2)) text; -webkit-text-fill-color: rgba(0,0,0,0.01);">
-                </i>
-            </div> -->
-        <!-- </div> -->
         <div class="wrapper">
             <div id="one">
                 <div class="bigcheese"
@@ -229,3 +199,4 @@
     </body>
 
 </html>
+
