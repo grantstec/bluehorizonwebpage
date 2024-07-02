@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BlueHorizon.app</title>
 
-        <link rel="stylesheet" href="loginpagestyle.css">
+        <link rel="stylesheet" href="regstyle.css">
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
             rel='stylesheet'>
@@ -14,7 +14,13 @@
         <span class="bgwrapper">
             <span class="wrapper">
                 <form action="authenticate.php" method="post">
-                    <h1>Login</h1>
+                    <h1>Sign Up</h1>
+                    <div class="input-box">
+                        <label for="email">
+                            <i class='bx bxs-envelope'></i>
+                        </label>
+                        <input type="email" name="email" placeholder="Email" id="email" required>
+                    </div>
                     <div class="input-box">
                         <label for="username">
                             <i class='bx bxs-user'></i>
@@ -27,13 +33,15 @@
                         </label>
                         <input type="password" name="password" placeholder="Password" id="password" required>
                     </div>
-                    <div class="remember-forgot">
-                        <label><input type="checkbox">Remember Me</label>
-                        <a href="forgotpsw.html">Forgot Password</a>
+                    <div class="input-box">
+                        <label for="password">
+                            <i class='bx bxs-lock'></i>
+                        </label>
+                        <input type="password" name="password" placeholder="Confirm Password" id="password" required>
                     </div>
-                    <button type="submit" class="btn">Login</button>
-                    <div class="register-link">
-                        <p>Dont have an account? <a href="register.html">Sign Up</a></p>
+                    <button type="submit" class="btn">Sign Up</button>
+                    <div class="Login-link">
+                        <p>Already have an account? <a href="login.html">Login</a></p>
                     </div>
                 </form>
             </span>
